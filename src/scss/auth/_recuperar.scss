@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.recuperar {
+    margin-top: 10%;
+    .uptask {
+        @include m.degradado(v.$rosa);
+    }
+
+    input[type="submit"] {
+        @include m.btn-l(v.$rosa, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$rosa;
+        }
+    }
+}

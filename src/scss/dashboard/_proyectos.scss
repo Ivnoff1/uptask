@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.null-proyect {
+    a {
+        color: v.$cyan;
+    }
+}
+
+.proyectos-li {
+    list-style: none;
+    padding: 0;
+    margin-top: 3rem;
+    @include m.grid(1, 2rem);
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+    @include m.desktop {
+        @include m.grid(3, 2rem);
+    }
+
+    .proyecto {
+        background-color: lighten(v.$gris, 40%);
+        max-height: 12rem;
+        padding: 5rem;
+        border-radius: .5rem;
+        transition-property: background-color, transform;
+        transition-duration: 300ms;
+        color: v.$grisOscuro;
+        font-weight: 600;
+        &:hover {
+            transform: scale(1.02);
+            background-color: lighten(v.$gris, 45%);
+            cursor: pointer;
+        }
+    }
+}

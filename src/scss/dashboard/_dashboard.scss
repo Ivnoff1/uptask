@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.dashboard {
+    background-color: lighten(v.$gris, 40%);
+    padding-top: 1rem;
+    height: 100vh;
+    @include m.tablet {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .panel {
+        background-color: v.$blanco;
+        border-top-left-radius: 1rem;
+        flex: 1;
+        @include m.tablet {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+    }
+
+    .contenido {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .nombre-pagina {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+    }
+
+    .form {
+        input:not([type="submit"]) {
+            max-width: 60rem;
+        }
+
+        input[type="submit"] {
+            @include m.btn(v.$cyan, v.$blanco);
+        }
+    }
+
+    .proyecto-contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}

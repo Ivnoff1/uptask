@@ -1,0 +1,126 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sidebar {
+    display: none;
+    @include m.tablet {
+        display: flex;
+    }
+    flex-direction: column;
+    gap: 5rem;
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: 0 1rem 0 0;
+    height: 100%;
+    
+    h2 {
+        color: v.$cyan;
+        margin: 0;
+        text-align: center;
+    }
+    .sidebar-nav {
+        a {
+            display: block;
+            color: v.$negro;
+            margin-bottom: 1.5rem;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            transition-property: background-color;
+            transition-duration: 400ms;
+            &:hover,
+            &.activo {
+                background-color: lighten(v.$gris, 40%);
+            }
+
+            i {
+                margin-right: 1rem;
+            }
+
+        }
+
+        .logout {
+            background-color: lighten(v.$rojo, 10%);
+            color: v.$blanco;
+            
+        }
+    }
+
+
+}
+
+.sidebar-mobile {
+    display: none;
+    background-color: v.$cyan;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 1;
+    bottom: 0;
+    transition-property: all;
+    transition-duration: 300;
+    z-index: 99;
+    &.show {
+        display: block;
+        @include m.tablet {
+            display: none;
+        }
+    }
+    
+    &.hide {
+        display: none;
+    }
+
+    @include m.tablet {
+        display: none;
+    }
+
+    h2 {
+        color: v.$blanco;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .close {
+        font-size: 3rem;
+        color: v.$blanco;
+        cursor: pointer;
+    }
+
+    .close-item {
+        display: flex;
+        padding: 2rem;
+        justify-content: flex-end;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        a {
+            color: v.$blanco;
+            margin-bottom: 1.5rem;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            transition-property: background-color;
+            transition-duration: 400ms;
+            &:hover,
+            &.activo {
+                background-color: lighten(v.$gris, 40%);
+                color: v.$cyan;
+            }
+
+            i {
+                margin-right: 1rem;
+            }
+
+        }
+
+        .logout {
+            background-color: lighten(v.$rojo, 10%);
+            color: v.$blanco;
+        }
+    }
+
+
+}
+

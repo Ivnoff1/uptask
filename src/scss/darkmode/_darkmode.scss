@@ -1,0 +1,97 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@media (prefers-color-scheme: dark) {
+    $negro: #1E1E1E;
+    body {
+        background-color: $negro;
+    }
+
+    .tagline {
+        color: v.$blanco;
+    }
+
+    .descripcion-pagina {
+        color: v.$blanco;
+    }
+
+    .form {
+        label {
+            color: v.$blanco;
+        }
+        .campo {
+            input {
+                background-color: lighten($negro, 15%);
+                color: v.$blanco;
+            }
+        }
+    }
+
+    .dashboard {
+        background-color: $negro;
+
+        .sidebar {
+            background-color: lighten($negro, 2%);
+        }
+
+        .sidebar .sidebar-nav a {
+            color: v.$blanco;
+            &:hover,
+            &.activo {
+                color: lighten($negro, 10%);
+            }
+        }
+
+        .panel {
+            background-color: $negro;
+            @include m.tablet {
+                background-color: lighten($negro, 2%);
+            }
+
+
+            .nombre-pagina {
+                color: v.$blanco;
+            }
+        }
+
+        .sidebar-mobile {
+            background-color: lighten($negro, 2%);
+        }
+
+        .proyecto {
+            background-color: lighten($negro, 15%);
+            color: v.$blanco;
+        }
+
+        .filters-inputs {
+            h2 {
+                color: v.$blanco;
+            }
+
+            .campo label {
+                color: v.$blanco;
+            }
+        }
+
+        .task {
+            color: v.$blanco;
+            &:nth-child(even) {
+                background-color: lighten(v.$negro, 10%);
+            }
+
+            p {
+                color: v.$blanco;
+            }
+        }
+
+        .modal form {
+            background-color: lighten(v.$negro, 10%);
+            legend {
+                color: v.$blanco;
+            }
+        }
+
+    }
+
+
+}

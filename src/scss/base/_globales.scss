@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    font-family: v.$fuente_textos;
+    font-size: 1.6rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contenedor-sm {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.contenedor-xsm {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.contenedor-short {
+    max-width: 60rem;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lighten(v.$gris, 20%);
+    border-radius: 5px;
+}
