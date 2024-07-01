@@ -3,7 +3,7 @@
 
 .login {
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 10rem;
     .uptask {
         @include m.degradado(v.$cyan);
     }

@@ -3,6 +3,7 @@
 
 .crear {
     margin-top: 5%;
+    margin-bottom: 5rem;
     .uptask {
         @include m.degradado(v.$morado);
     }
