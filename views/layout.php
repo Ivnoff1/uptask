@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <?php include_once __DIR__ . '/templates/navbar.php' ?>
     <?php echo $contenido; ?>
     <?php echo $script ?? ''; ?>
 </body>
